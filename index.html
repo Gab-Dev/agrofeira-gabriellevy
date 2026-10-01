@@ -1,52 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFeira</title>
+    <title>AgroFeira - Página Inicial</title>
 </head>
 
 <body>
 
-    <header>
+    <a href="#conteudo" class="pular">Pular para o conteúdo</a>
+
+    <header class="cabecalho-site">
         <h1>AgroFeira</h1>
 
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre a AgroFeira</a></li>
-                <li><a href="#produtos">Produtos</a></li>
+        <nav aria-label="Principal">
+            <ul class="menu">
+                <li>
+                    <a href="index.html" aria-current="page">Início</a>
+                </li>
+                <li>
+                    <a href="safra.html">Safra</a>
+                </li>
+                <li>
+                    <a href="cadastro-produtor.html">Cadastro</a>
+                </li>
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo">
 
         <section>
-            <h2 id="sobre">Sobre a AgroFeira</h2>
+            <h2 id="feira">Sobre a AgroFeira</h2>
 
             <p>
-                A AgroFeira é um espaço dedicado aos produtores da região de
-                Paragominas, reunindo produtos agrícolas e alimentos produzidos
-                localmente. A feira aproxima os produtores da comunidade e
-                facilita o acesso a produtos da região.
+                A <strong>AgroFeira</strong> é um espaço dedicado aos produtores
+                da região de Paragominas, reunindo produtos agrícolas e alimentos
+                produzidos localmente.
             </p>
+
+            <figure class="figura-destaque">
+
+                <picture>
+                    <source
+                        media="(min-width: 800px)"
+                        srcset="feira-1280.jpg 1280w">
+
+                    <img
+                        src="feira-330.jpg"
+                        srcset="feira-330.jpg 330w, feira-1280.jpg 1280w"
+                        sizes="(min-width: 800px) 1280px, 330px"
+                        width="330"
+                        height="247"
+                        alt="Barraca de frutas e verduras com diversos produtos agrícolas expostos em uma feira">
+                </picture>
+
+                <figcaption>
+                    Feira de frutas e verduras com produtos agrícolas.
+                    Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.
+                </figcaption>
+
+            </figure>
+
+            <div class="busca">
+
+                <form action="">
+                    <label for="produto">Procurar produto</label>
+
+                    <input
+                        type="search"
+                        id="produto"
+                        name="campo">
+
+                    <button type="submit">
+                        <img
+                            src="lupa.png"
+                            width="40"
+                            height="40"
+                            alt="Pesquisar produto">
+                    </button>
+                </form>
+
+            </div>
         </section>
+
 
         <section>
-            <h2 id="produtos">Produtos</h2>
 
-            <ul>
-                <li>Tomate — quilograma</li>
-                <li>Banana — dúzia</li>
-                <li>Alface — unidade</li>
+            <h2 id="produtos">Produtos da AgroFeira</h2>
+
+            <ul class="lista-produtos">
+
+                <li class="cartao-produto">
+                    <strong>Tomate</strong> — quilograma
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Banana</strong> — dúzia
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Alface</strong> — unidade
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Açaí</strong> — litro
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Mandioca</strong> — quilograma
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Cupuaçu</strong> — quilograma
+                </li>
+
             </ul>
+
+
+            <div class="aviso">
+                <p>
+                    Os preços podem mudar toda semana.
+                    <strong>Confira os valores atualizados antes da compra.</strong>
+                </p>
+            </div>
+
         </section>
+
+        <p>
+            Nesta página você pode conhecer a
+            <a href="#feira">AgroFeira</a>
+            e consultar os
+            <a href="#produtos">produtos disponíveis</a>.
+        </p>
 
     </main>
 
-    <footer>
-        <p>AgroFeira — valorizando os produtores da região de Paragominas.</p>
+
+    <aside>
+        <h2>Informações da feira</h2>
+
+        <p>
+            <strong>Endereço:</strong>
+            Feira Municipal de Paragominas, Pará.
+        </p>
+
+        <p>
+            <strong>Horário:</strong>
+            Consulte os horários de funcionamento da feira.
+        </p>
+    </aside>
+
+
+    <footer class="rodape-site">
+        <p>
+            AgroFeira — valorizando os produtores da região de Paragominas.
+        </p>
     </footer>
 
 </body>
+
 </html>
